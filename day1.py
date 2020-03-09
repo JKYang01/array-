@@ -43,7 +43,6 @@ def maxArea(self, height: List[int]) -> int:
 ### move zero num: 283
 # [1,2,3,0,4,0,3,12] to [1,2,3,4,3,12,0,0]
 
-class Solution(object):
     def moveZeroes(self, nums):
         """
         :type nums: List[int]
