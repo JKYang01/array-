@@ -1,6 +1,27 @@
 
-## find the maximum area  num:11 
 
+## find the maximum area  num:11 
+## my best solution ※ two pointers when 
+class Solution(object):
+    def maxArea(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+        # compare the previous result and the latest one
+        area,i,j = 0, 0, len(height)-1
+        
+        while i<j:   
+            area = max(area, (j-i)*min(height[i],height[j])) # calculating the area
+            
+            if height[i]<=height[j]: # if the left one is shorter  
+                i+=1                 # then the pointer i move right i+=1
+                
+            else:
+                j-=1  
+
+
+# Answer1 
 def maxArea(self, height: List[int]) -> int:
         area = 0 
         i,j=0,len(height)-1
@@ -21,7 +42,7 @@ def maxArea(self, height: List[int]) -> int:
 
         return area
 
-## simpler solution! 
+## answe2 simpler solution! 
 ## compare the two heights on the left an right bound rather than compare to the on next 
     
     def maxArea(self, h: List[int]) -> int:
