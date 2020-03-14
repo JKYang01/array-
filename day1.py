@@ -14,7 +14,7 @@ class Solution(object):
         while i<j:   
             area = max(area, (j-i)*min(height[i],height[j])) # calculating the area
             
-            if height[i]<=height[j]: # if the left one is shorter  
+            if height[i]< height[j]: # if the left one is shorter  
                 i+=1                 # then the pointer i move right i+=1
                 
             else:
